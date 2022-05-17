@@ -6,7 +6,7 @@ name: deploy
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ gh-pages ]
+    branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -20,6 +20,6 @@ jobs:
       - name: deploy
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
-          PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          PERSONAL_TOKEN: ${{ secrets.commit_secret }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./
