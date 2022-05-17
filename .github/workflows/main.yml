@@ -27,7 +27,7 @@ jobs:
           git config --global user.email shuijie_zhang@163.com
           git config --global user.name zhangshuijie
           git status
-          git remote add origin https://${{secrets.commit_secret}}@github.com/shsoul/magic.git
+          git remote add origin https://${{secrets.commit_secret}}@github.com/shsoul/magic-web.git
           git checkout -b gh-pages
           git add --all
           git commit -m "update"
